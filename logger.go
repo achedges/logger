@@ -46,6 +46,10 @@ func (l *Logger) Close() {
 	}
 }
 
+func (l *Logger) Logf(toConsole bool, format string, a ...any) {
+	l.Log(fmt.Sprintf(format, a...), toConsole)
+}
+
 func (l *Logger) Log(message string, toConsole bool) {
 	_, err := l.log.WriteString(message + "\n")
 	if err != nil {

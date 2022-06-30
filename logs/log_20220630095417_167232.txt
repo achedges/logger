@@ -1,0 +1,2 @@
+Test log entry to file only
+Test log entry to file and console
